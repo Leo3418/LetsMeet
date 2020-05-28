@@ -1,6 +1,8 @@
 import React from 'react';
 import {View} from 'react-native';
 import NotificationComponent from "../../components/NotificationComponent/index";
+import styles from "../GroupsScreen/styles";
+import {Appbar} from "react-native-paper";
 
 /*
  * TODO: determine a notification's model
@@ -29,6 +31,25 @@ function NotificationsScreen({route, navigation}) {
 
   return (
       <View>
+        {
+          /*
+          * TODO: remove duplicate code copied from GroupsScreen
+          *  Is there a way to refactor this into a reusable module?
+          */
+        }
+
+        <Appbar.Header style={styles.navbar} >
+          <Appbar.Content
+            title="LetsMeet"
+          />
+          <Appbar.Action
+            icon="dots-vertical"
+            color="white"
+            size={20}
+            onPress={()=> alert("Will eventually take you to the settings screen")}
+          />
+        </Appbar.Header>
+
         {components}
       </View>
   );
