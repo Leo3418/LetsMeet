@@ -9,7 +9,7 @@ import styles from './styles';
  * - positiveAction: the action to execute when the user makes a positive choice
  * - negativeAction: the action to execute when the user makes a negative choice
  */
-function NotificationComponent(props) {
+function NotificationComponent({ text, positiveAction, negativeAction }) {
   return (
     <View style={styles.view}>
       {/* Avatar */}
@@ -19,17 +19,17 @@ function NotificationComponent(props) {
 
       {/* Message and buttons */}
       <View>
-        <Text>{props.text}</Text>
+        <Text>{text}</Text>
         <View style={styles.buttons_view}>
           <Button
-            onPress={props.positiveAction}
+            onPress={positiveAction}
             mode='contained'
             style={[styles.button, styles.button_positive]}
           >
             Accept
           </Button>
           <Button
-            onPress={props.negativeAction}
+            onPress={negativeAction}
             mode='contained'
             style={[styles.button, styles.button_negative]}
           >
