@@ -246,7 +246,13 @@ exports[`renders correctly 1`] = `
         i
       </Text>
     </View>
-    <View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
       <Text
         style={
           Array [
@@ -537,7 +543,13 @@ exports[`renders correctly 1`] = `
         i
       </Text>
     </View>
-    <View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
       <Text
         style={
           Array [
