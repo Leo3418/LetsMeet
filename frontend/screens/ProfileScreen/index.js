@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View } from 'react-native';
 import {
-  List, Text, Appbar, Divider, FAB,
+  List, Text, Divider, FAB,
 } from 'react-native-paper';
 import styles from './styles';
 import { getUser } from '../../controllers/UserController';
@@ -10,6 +10,7 @@ import ScheduleComponent from '../../components/ScheduleComponent/index'
 import Day from '../../enums/Day';
 import moment from 'moment';
 import Schedule from '../../models/Schedule';
+import AppbarComponent from "../../components/AppbarComponent";
 
 function Profile({ navigation }) {
   const [user, setUser] = useState(JSON.parse('{"username" : "", "email" : "", "displayName" : ""}'));
@@ -94,10 +95,7 @@ function Profile({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Appbar.Header>
-        <Appbar.Content title="Profile" />
-        <Appbar.Action icon="dots-vertical" onPress={() => handleSettingsPress} color="#f9f9f9" />
-      </Appbar.Header>
+      <AppbarComponent title='Profile' />
       <List.Item
         style={styles.item}
         background='white'
